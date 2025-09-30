@@ -28,6 +28,7 @@ for i, job_title in enumerate(job_titles):
 fig.suptitle('Likelihood of Skills Requested in US Job Postings', fontsize=15)
 fig.tight_layout(h_pad=.8)
 plt.show()
+```
 
 ### Results
 
