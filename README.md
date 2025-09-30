@@ -5,6 +5,7 @@ The objective is to identify the most in-demand skills for the top three most po
 
 View my notebook to see detailed steps here: [2_Skills_Demand.ipynb](2_Skill_Demand.ipynb)
 ### Visualise Data (key codes)
+```python
 fig, ax = plt.subplots(len(job_titles), 1)
 
 
