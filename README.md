@@ -137,3 +137,72 @@ plt.show()
 - The Pay vs. Demand Paradox: The most significant insight is that there is no overlap between the top 10 highest-paid skills and the top 10 most in-demand skills. The skills that make you most hirable are not the ones that earn the most money.
 - In-Demand Skills are Foundational: The most requested skills are the core tools of data analysis: programming languages (python, sql, r), BI software (tableau, power bi), and business tools (excel, powerpoint). These skills have median salaries clustered around $90K-$100K.
 - High-Paying Skills are Specialized: The highest salaries are tied to specialized, technical skills often found in software engineering, MLOps, or blockchain, such as solidity (blockchain), hugging face (AI/ML), and gitlab (DevOps). These niche skills command salaries starting around $150K and reaching nearly $200K.
+
+## 4. What's the optimal skill to learn for Data Analysts?
+
+### Visualize Data (Key Codes)
+```Python
+# 1. Import necessary libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import PercentFormatter
+from adjustText import adjust_text # Required for label adjustment: pip install adjustText
+
+# Assume df_DA_skills_high_demand is a pre-processed DataFrame.
+# It must contain the following columns:
+# 'skill_percent': The percentage of job postings that mention the skill.
+# 'median_salary': The median salary associated with the skill.
+# 'technology': The category the skill belongs to (for color-coding).
+# The DataFrame's index should be the skill name (e.g., 'python', 'sql').
+
+# --- 1. Create the base scatter plot, color-coded by technology ---
+plt.figure(figsize=(12, 8))
+sns.set_theme(style='ticks')
+sns.scatterplot(
+    data=df_DA_skills_high_demand,
+    x='skill_percent',
+    y='median_salary',
+    hue='technology',
+    s=100 # Increase the size of the points for better visibility
+)
+
+# --- 2. Smartly adjust text labels to prevent them from overlapping ---
+# Prepare the text labels for each point on the plot
+texts = []
+for i, skill_name in enumerate(df_DA_skills_high_demand.index):
+    texts.append(
+        plt.text(
+            df_DA_skills_high_demand['skill_percent'].iloc[i], 
+            df_DA_skills_high_demand['median_salary'].iloc[i], 
+            skill_name
+        )
+    )
+
+# Use adjust_text to automatically position the labels
+adjust_text(texts, arrowprops=dict(arrowstyle='->', color='gray'))
+
+# --- 3. Format the axes and chart titles for clarity ---
+plt.xlabel('Percent of Data Analyst Jobs')
+plt.ylabel('Median Yearly Salary')
+plt.title('Most Optimal Skills for Data Analysts in the US')
+plt.legend(title='Technology')
+
+# Get the current axes object for advanced formatting
+ax = plt.gca()
+# Format the y-axis to show dollars in thousands (e.g., $100K)
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+# Format the x-axis as percentages (e.g., 20%)
+ax.xaxis.set_major_formatter(PercentFormatter(xmax=1, decimals=0)) # xmax=1 assumes the original data is in decimal format (e.g., 0.20)
+
+# Optimize the layout and display the plot
+plt.tight_layout()
+plt.show()
+```
+### Results
+![Most optimal Skill for Data Analysts in the US](images\Most_Optimal_Skills_for_Data_Analysts_in_the_US_with_Coloring_by_Technology.png)
+### Insights
+- The Python Sweet Spot 🐍: Python is a top-tier skill, requested in over 27% of job postings. Crucially, it also commands the highest median salary among the most common skills, at nearly $98K.
+- High Demand Doesn't Always Mean High Pay: SQL and Excel are the two most requested skills overall, appearing in 51% and 41% of job postings, respectively. However, the scatter plot shows that while both are essential, Excel's median salary ( ~$84K) is significantly lower than that of more technical skills like SQL (~$91K) and Python.
+- BI Tools are Valuable: Visualization tools like Tableau and Power BI strike an excellent balance. They are frequently requested (over 20%) and are associated with solid median salaries (over $90K), making them high-value assets for an analyst.
+- Niche Skills Pay Well: Specialized database skills like Oracle offer high salaries (over $96K) but appear in a much smaller percentage of job postings. This highlights a classic trade-off between learning a widely-used tool versus a high-paying, specialized one.
