@@ -211,6 +211,6 @@ plt.show()
 
 ### Insights
 - The Python Sweet Spot 🐍: Python is a top-tier skill, requested in over 27% of job postings. Crucially, it also commands the highest median salary among the most common skills, at nearly $98K.
-- High Demand Doesn't Always Mean High Pay: SQL and Excel are the two most requested skills overall, appearing in 51% and 41% of job postings, respectively. However, the scatter plot shows that while both are essential, Excel's median salary ( ~$84K) is significantly lower than that of more technical skills like SQL (~$91K) and Python.
+- High Demand Doesn't Always Mean High Pay: SQL and Excel are the two most requested skills overall, appearing in 51% and 41% of job postings, respectively. However, the scatter plot shows that while both are essential, Excel's median salary $84K is significantly lower than that of more technical skills like SQL 91K and Python.
 - BI Tools are Valuable: Visualization tools like Tableau and Power BI strike an excellent balance. They are frequently requested (over 20%) and are associated with solid median salaries (over $90K), making them high-value assets for an analyst.
 - Niche Skills Pay Well: Specialized database skills like Oracle offer high salaries (over $96K) but appear in a much smaller percentage of job postings. This highlights a classic trade-off between learning a widely-used tool versus a high-paying, specialized one.
