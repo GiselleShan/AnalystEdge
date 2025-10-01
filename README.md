@@ -32,7 +32,9 @@ plt.show()
 
 ### Results
 
+
 ![Visualisation of Top Skills for Data Roles](images/output_skills.png)
+
 
 ### Insights
 - Key Takeaways by Role
