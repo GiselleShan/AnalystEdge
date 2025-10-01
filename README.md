@@ -75,7 +75,8 @@ for i in range(5):
 
 ```
 ### Results
-![Trending Top skills for Data Roles in the US](images\Trending_Top_Skills_for_Data_Analysts_in_the_US.png)
+![Trending Top skills for Data Roles in the US](images/Trending_Top_Skills_for_Data_Analysts_in_the_US.png)
+
 
 ### Insights
 - SQL Remains Dominant: SQL was the most consistently demanded skill throughout the year. Despite a gradual decrease from its peak at the beginning of the year, it remained comfortably above all other skills.
@@ -134,7 +135,9 @@ ax[1].xaxis.set_major_formatter(formatter)
 plt.tight_layout()
 plt.show()
 ```
-![The Highest Paid & Most In-demand Skills](images\Highest_Paid_and_Most_In_Demand_Skills_for_Data_Analysts_in_the_US.png)
+![The Highest Paid & Most In-demand Skills](images/Highest_Paid_and_Most_In_Demand_Skills_for_Data_Analysts_in_the_US.png)
+
+
 #### Insights
 - The Pay vs. Demand Paradox: The most significant insight is that there is no overlap between the top 10 highest-paid skills and the top 10 most in-demand skills. The skills that make you most hirable are not the ones that earn the most money.
 - In-Demand Skills are Foundational: The most requested skills are the core tools of data analysis: programming languages (python, sql, r), BI software (tableau, power bi), and business tools (excel, powerpoint). These skills have median salaries clustered around $90K-$100K.
@@ -202,7 +205,10 @@ plt.tight_layout()
 plt.show()
 ```
 ### Results
-![Most optimal Skill for Data Analysts in the US](images\Most_Optimal_Skills_for_Data_Analysts_in_the_US_with_Coloring_by_Technology.png)
+
+![Most optimal Skill for Data Analysts in the US](images/Most_Optimal_Skills_for_Data_Analysts_in_the_US_with_Coloring_by_Technology.png)
+
+
 ### Insights
 - The Python Sweet Spot 🐍: Python is a top-tier skill, requested in over 27% of job postings. Crucially, it also commands the highest median salary among the most common skills, at nearly $98K.
 - High Demand Doesn't Always Mean High Pay: SQL and Excel are the two most requested skills overall, appearing in 51% and 41% of job postings, respectively. However, the scatter plot shows that while both are essential, Excel's median salary ( ~$84K) is significantly lower than that of more technical skills like SQL (~$91K) and Python.
