@@ -1,3 +1,4 @@
+GitHub is used here primarily to showcase work samples, not ongoing project maintenance.
 # The analysis
 ## 1. What are the most demanded skills for the top 3 most popular data roles?
 The objective is to identify the most in-demand skills for the top three most popular data roles. I filtered out the positions based on their popularity and identified the top five skills for the top three roles. This query identifies the most common job titles and their top skills, indicating which skills should be prioritized based on the targeted role.
